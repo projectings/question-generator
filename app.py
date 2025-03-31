@@ -4,6 +4,7 @@ import json
 from database import QuestionDatabase
 from question_generator import QuestionGenerator
 
+os.makedirs("scraped_data", exist_ok=True)
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # for flash messages
 
