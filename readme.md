@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 1. Run the web scraper to populate the database (optional, the app comes with sample data):
 ```bash
-python web-scraper.py
+python web_scraper.py
 ```
 
 2. Start the Flask application:
@@ -48,7 +48,7 @@ python app.py
 - `database.py` - Database operations for question storage
 - `question_generator.py` - Interface with the QuestionModifier
 - `question_modifier.py` - Original question modification logic
-- `web-scraper.py` - Original web scraper for Edexcel questions
+- `web_scraper.py` - Original web scraper for Edexcel questions
 - `templates/` - HTML templates for the web interface
 - `static/` - CSS, JavaScript, and other static assets
 - `scraped_data/` - Directory for the question database
