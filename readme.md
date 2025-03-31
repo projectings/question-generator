@@ -13,8 +13,8 @@ A web application for generating and modifying further mathematics A-level quest
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/further-maths-question-generator.git
-cd further-maths-question-generator
+git clone https://github.com/projectings/question-generator.git
+cd question-generator
 ```
 
 2. Create a virtual environment:
@@ -47,7 +47,7 @@ python app.py
 - `app.py` - Main Flask application
 - `database.py` - Database operations for question storage
 - `question_generator.py` - Interface with the QuestionModifier
-- `question-modifier.py` - Original question modification logic
+- `question_modifier.py` - Original question modification logic
 - `web-scraper.py` - Original web scraper for Edexcel questions
 - `templates/` - HTML templates for the web interface
 - `static/` - CSS, JavaScript, and other static assets
