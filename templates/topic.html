@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}{{ topic }} Questions - Further Maths Question Generator{% endblock %}
+
+{% block content %}
+<section class="container">
+    <div class="page-header">
+        <h1>{{ topic }} Questions</h1>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Topics</a>
+    </div>
+    
+    <div class="questions-list">
+        {% for question in questions %}
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-id">ID: {{ question.id }}</span>
+                    {% if question.generated %}
+                        <span class="question-tag">Generated</span>
+                    {% endif %}
+                    <span class="question-marks">{{ question.total_marks }} marks</span>
+                </div>
+                
+                <div class="question-preview">
+                    {{ question.question_text|truncate(150) }}
+                </div>
+                
+                <div class="question-footer">
+                    <a href="{{ url_for('view_question', question_id=question.id) }}" class="btn">View Question</a>
+                </div>
+            </div>
+        {% else %}
+            <div class="empty-state">
+                <h2>No questions available</h2>
+                <p>There are no questions available for this topic yet.</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
