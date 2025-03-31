@@ -1,0 +1,17 @@
+project/
+├── scraped_data/         # Directory for question database
+├── question-modifier.py  # Your existing code (unchanged)
+├── web-scraper.py        # Your existing code (unchanged)
+├── app.py                # Main application entry point
+├── database.py           # Database operations
+├── question_generator.py # Interface with QuestionModifier
+├── templates/            # HTML templates for the web interface
+│   ├── base.html         # Base template with common elements
+│   ├── index.html        # Homepage with topic selection
+│   ├── topic.html        # Topic-specific question list
+│   └── question.html     # Individual question view with regeneration option
+└── static/               # Static assets
+    ├── css/
+    │   └── style.css     # Styling for the application
+    └── js/
+        └── script.js     # Client-side interactions
